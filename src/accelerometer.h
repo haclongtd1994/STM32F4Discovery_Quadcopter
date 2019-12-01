@@ -5,7 +5,7 @@
 #include <i2c.h>
 #include <stdint.h>
 
-bool isReadingAccelerometer;
+extern bool isReadingAccelerometer;
 
 typedef struct AccelerometerReading {
 	float x;
@@ -20,7 +20,7 @@ typedef struct AccelerometerReading {
 	uint32_t readings;
 }AccelerometerReading;
 
-struct AccelerometerReading accelerometerReading;
+extern struct AccelerometerReading accelerometerReading;
 
 // Function to initialize Accelermeter
 void InitialiseAccelerometer();

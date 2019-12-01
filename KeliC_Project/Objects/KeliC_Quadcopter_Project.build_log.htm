@@ -1,0 +1,371 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Phan Thanh Hung, PTH Company, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.28.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+D:\Project_STM32\quadcopter_STM32f4\STM32F4Discovery_Quadcopter\KeliC_Project\KeliC_Quadcopter_Project.uvprojx
+Project File Date:  12/14/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling i2c.c...
+i2c.h(34): warning:  #1295-D: Deprecated declaration WaitUntilBusIsFree - give arg types
+  void WaitUntilBusIsFree();
+i2c.h(37): warning:  #1295-D: Deprecated declaration ResetI2C - give arg types
+  void ResetI2C();
+i2c.h(40): warning:  #1295-D: Deprecated declaration InitialiseI2C - give arg types
+  void InitialiseI2C();
+i2c.h(43): warning:  #1295-D: Deprecated declaration SendStart - give arg types
+  void SendStart();
+i2c.h(52): warning:  #1295-D: Deprecated declaration SendStop - give arg types
+  void SendStop();
+i2c.c(41): warning:  #223-D: function "warning" declared implicitly
+  	warning("Resetting I2C bus");		// Function in panic
+i2c.c(46): warning:  #174-D: expression has no effect
+  	HAL_I2C_Master_Sequential_Receive_IT
+i2c.c(47): error:  #65: expected a ";"
+      I2C_ITConfig(I2C1, I2C_IT_ERR | I2C_IT_EVT | I2C_IT_BUF, DISABLE);
+i2c.c(50): warning:  #223-D: function "I2C_SoftwareResetCmd" declared implicitly
+      I2C_SoftwareResetCmd(I2C1, ENABLE);
+i2c.c(54): warning:  #223-D: function "RCC_APB1PeriphClockCmd" declared implicitly
+  	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, DISABLE);
+i2c.c(54): error:  #20: identifier "RCC_APB1Periph_I2C1" is undefined
+  	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, DISABLE);
+i2c.c(57): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+      RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+i2c.c(57): error:  #20: identifier "RCC_AHB1Periph_GPIOB" is undefined
+      RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+i2c.c(61): error:  #136: struct "<unnamed>"  has no field "GPIO_Pin"
+      gpioClockStructure.GPIO_Pin = GPIO_Pin_8;
+i2c.c(61): error:  #20: identifier "GPIO_Pin_8" is undefined
+      gpioClockStructure.GPIO_Pin = GPIO_Pin_8;
+i2c.c(62): error:  #136: struct "<unnamed>"  has no field "GPIO_Mode"
+      gpioClockStructure.GPIO_Mode = GPIO_Mode_OUT;
+i2c.c(62): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+      gpioClockStructure.GPIO_Mode = GPIO_Mode_OUT;
+i2c.c(63): error:  #136: struct "<unnamed>"  has no field "GPIO_Speed"
+      gpioClockStructure.GPIO_Speed = GPIO_Speed_100MHz;
+i2c.c(63): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+      gpioClockStructure.GPIO_Speed = GPIO_Speed_100MHz;
+i2c.c(64): error:  #136: struct "<unnamed>"  has no field "GPIO_OType"
+      gpioClockStructure.GPIO_OType = GPIO_OType_PP;
+i2c.c(64): error:  #20: identifier "GPIO_OType_PP" is undefined
+      gpioClockStructure.GPIO_OType = GPIO_OType_PP;
+i2c.c(65): error:  #136: struct "<unnamed>"  has no field "GPIO_PuPd"
+      gpioClockStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+i2c.c(65): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+      gpioClockStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+i2c.c(66): warning:  #223-D: function "GPIO_Init" declared implicitly
+      GPIO_Init(GPIOB, &gpioClockStructure);
+i2c.c(70): error:  #136: struct "<unnamed>"  has no field "GPIO_Pin"
+      gpioDataStructure.GPIO_Pin = GPIO_Pin_9;
+i2c.c(70): error:  #20: identifier "GPIO_Pin_9" is undefined
+      gpioDataStructure.GPIO_Pin = GPIO_Pin_9;
+i2c.c(71): error:  #136: struct "<unnamed>"  has no field "GPIO_Mode"
+      gpioDataStructure.GPIO_Mode = GPIO_Mode_IN;
+i2c.c(71): error:  #20: identifier "GPIO_Mode_IN" is undefined
+      gpioDataStructure.GPIO_Mode = GPIO_Mode_IN;
+i2c.c(72): error:  #136: struct "<unnamed>"  has no field "GPIO_Speed"
+      gpioDataStructure.GPIO_Speed = GPIO_Speed_100MHz;
+i2c.c(73): error:  #136: struct "<unnamed>"  has no field "GPIO_PuPd"
+      gpioDataStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+i2c.c(83): warning:  #223-D: function "WaitAMillisecond" declared implicitly
+  	WaitAMillisecond();
+i2c.c(86): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  		GPIO_SetBits(GPIOB, GPIO_Pin_8);
+i2c.c(89): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+  		GPIO_ResetBits(GPIOB, GPIO_Pin_8);
+i2c.c(145): warning:  #223-D: function "I2C_StretchClockCmd" declared implicitly
+    I2C_StretchClockCmd(I2C1, ENABLE);
+i2c.c(150): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  	SMBUS_HandleTypeDef hsmbus1;
+i2c.c(153): error:  #20: identifier "SMBUS_ADDRESSINGMODE_7BIT" is undefined
+    hsmbus1.Init.AddressingMode = SMBUS_ADDRESSINGMODE_7BIT;
+i2c.c(154): error:  #20: identifier "SMBUS_DUALADDRESS_DISABLE" is undefined
+    hsmbus1.Init.DualAddressMode = SMBUS_DUALADDRESS_DISABLE;
+i2c.c(156): error:  #20: identifier "SMBUS_GENERALCALL_DISABLE" is undefined
+    hsmbus1.Init.GeneralCallMode = SMBUS_GENERALCALL_DISABLE;
+i2c.c(157): error:  #20: identifier "SMBUS_NOSTRETCH_DISABLE" is undefined
+    hsmbus1.Init.NoStretchMode = SMBUS_NOSTRETCH_DISABLE;
+i2c.c(158): error:  #20: identifier "SMBUS_PEC_DISABLE" is undefined
+    hsmbus1.Init.PacketErrorCheckMode = SMBUS_PEC_DISABLE;
+i2c.c(159): error:  #20: identifier "SMBUS_PERIPHERAL_MODE_SMBUS_SLAVE" is undefined
+    hsmbus1.Init.PeripheralMode = SMBUS_PERIPHERAL_MODE_SMBUS_SLAVE;
+i2c.c(168): error:  #20: identifier "NVIC_InitTypeDef" is undefined
+      NVIC_InitTypeDef NvicEventInterrupt;
+i2c.c(173): warning:  #223-D: function "NVIC_Init" declared implicitly
+  	NVIC_Init(&NvicEventInterrupt);
+i2c.c(175): error:  #20: identifier "NVIC_InitTypeDef" is undefined
+      NVIC_InitTypeDef NvicErrorInterrupt;
+i2c.c(183): warning:  #223-D: function "I2C_Cmd" declared implicitly
+  	I2C_Cmd(I2C1, ENABLE);
+i2c.c(186): warning:  #223-D: function "I2C_ITConfig" declared implicitly
+      I2C_ITConfig(I2C1, I2C_IT_ERR | I2C_IT_EVT | I2C_IT_BUF, DISABLE);
+i2c.c(196): warning:  #223-D: function "I2C_ITConfig" declared implicitly
+      I2C_ITConfig(I2C1, I2C_IT_ERR | I2C_IT_EVT | I2C_IT_BUF, ENABLE);
+i2c.c(208): warning:  #223-D: function "I2C_GenerateSTART" declared implicitly
+      I2C_GenerateSTART(I2C1, ENABLE);
+i2c.c(219): warning:  #223-D: function "I2C_GetLastEvent" declared implicitly
+  	uint32_t event = I2C_GetLastEvent(I2C1);
+i2c.c(222): error:  #20: identifier "I2C_EVENT_MASTER_MODE_SELECT" is undefined
+  		case I2C_EVENT_MASTER_MODE_SELECT:
+i2c.c(223): warning:  #223-D: function "I2C_AcknowledgeConfig" declared implicitly
+  			I2C_AcknowledgeConfig(I2C1, ENABLE);
+i2c.c(226): warning:  #223-D: function "I2C_Send7bitAddress" declared implicitly
+  				I2C_Send7bitAddress(I2C1, peripheralAddress, I2C_Direction_Transmitter);
+i2c.c(226): error:  #20: identifier "I2C_Direction_Transmitter" is undefined
+  				I2C_Send7bitAddress(I2C1, peripheralAddress, I2C_Direction_Transmitter);
+i2c.c: 23 warnings, 30 errors
+compiling Control.c...
+i2c.h(34): warning:  #1295-D: Deprecated declaration WaitUntilBusIsFree - give arg types
+  void WaitUntilBusIsFree();
+i2c.h(37): warning:  #1295-D: Deprecated declaration ResetI2C - give arg types
+  void ResetI2C();
+i2c.h(40): warning:  #1295-D: Deprecated declaration InitialiseI2C - give arg types
+  void InitialiseI2C();
+i2c.h(43): warning:  #1295-D: Deprecated declaration SendStart - give arg types
+  void SendStart();
+i2c.h(52): warning:  #1295-D: Deprecated declaration SendStop - give arg types
+  void SendStop();
+Control.c: 5 warnings, 0 errors
+compiling Debug.c...
+compiling LED_F4Discovery.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_i2c.c...
+compiling stm32f4xx_hal_smbus.c...
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(215): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_WaitOnFlagUntilTimeout(SMBUS_HandleTypeDef *hsmbus, uint32_t Flag, FlagStatus Status, uint32_t Timeout, uint32_t Tickstart);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(216): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static void SMBUS_ITError(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(219): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_MasterTransmit_TXE(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(220): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_MasterTransmit_BTF(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(221): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_MasterReceive_RXNE(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(222): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_MasterReceive_BTF(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(223): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_Master_SB(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(224): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_Master_ADD10(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(225): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_Master_ADDR(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(227): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_SlaveTransmit_TXE(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(228): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_SlaveTransmit_BTF(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(229): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_SlaveReceive_RXNE(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(230): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_SlaveReceive_BTF(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(231): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_Slave_ADDR(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(232): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_Slave_STOPF(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(233): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  static HAL_StatusTypeDef SMBUS_Slave_AF(SMBUS_HandleTypeDef *hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(282): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  HAL_StatusTypeDef HAL_SMBUS_Init(SMBUS_HandleTypeDef *hsmbus)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(308): error:  #20: identifier "HAL_SMBUS_STATE_RESET" is undefined
+    if (hsmbus->State == HAL_SMBUS_STATE_RESET)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(333): warning:  #223-D: function "HAL_SMBUS_MspInit" declared implicitly
+      HAL_SMBUS_MspInit(hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(337): error:  #20: identifier "HAL_SMBUS_STATE_BUSY" is undefined
+    hsmbus->State = HAL_SMBUS_STATE_BUSY;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(340): warning:  #223-D: function "__HAL_SMBUS_DISABLE" declared implicitly
+    __HAL_SMBUS_DISABLE(hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(346): warning:  #223-D: function "SMBUS_FREQRANGE" declared implicitly
+    freqrange = SMBUS_FREQRANGE(pclk1);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(354): warning:  #223-D: function "SMBUS_RISE_TIME" declared implicitly
+    MODIFY_REG(hsmbus->Instance->TRISE, I2C_TRISE_TRISE, SMBUS_RISE_TIME(freqrange));
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(358): warning:  #223-D: function "SMBUS_SPEED_STANDARD" declared implicitly
+    MODIFY_REG(hsmbus->Instance->CCR, (I2C_CCR_FS | I2C_CCR_DUTY | I2C_CCR_CCR), SMBUS_SPEED_STANDARD(pclk1, hsmbus->Init.ClockSpeed));
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(378): warning:  #223-D: function "__HAL_SMBUS_ENABLE" declared implicitly
+    __HAL_SMBUS_ENABLE(hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(380): error:  #20: identifier "HAL_SMBUS_ERROR_NONE" is undefined
+    hsmbus->ErrorCode = HAL_SMBUS_ERROR_NONE;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(381): error:  #20: identifier "HAL_SMBUS_STATE_READY" is undefined
+    hsmbus->State = HAL_SMBUS_STATE_READY;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(382): error:  #20: identifier "HAL_SMBUS_MODE_NONE" is undefined
+    hsmbus->PreviousState = SMBUS_STATE_NONE;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(395): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  HAL_StatusTypeDef HAL_SMBUS_DeInit(SMBUS_HandleTypeDef *hsmbus)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(406): error:  #20: identifier "HAL_SMBUS_STATE_BUSY" is undefined
+    hsmbus->State = HAL_SMBUS_STATE_BUSY;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(409): warning:  #223-D: function "__HAL_SMBUS_DISABLE" declared implicitly
+    __HAL_SMBUS_DISABLE(hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(421): warning:  #223-D: function "HAL_SMBUS_MspDeInit" declared implicitly
+    HAL_SMBUS_MspDeInit(hsmbus);
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(424): error:  #20: identifier "HAL_SMBUS_ERROR_NONE" is undefined
+    hsmbus->ErrorCode     = HAL_SMBUS_ERROR_NONE;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(425): error:  #20: identifier "HAL_SMBUS_STATE_RESET" is undefined
+    hsmbus->State         = HAL_SMBUS_STATE_RESET;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(426): error:  #20: identifier "HAL_SMBUS_MODE_NONE" is undefined
+    hsmbus->PreviousState = SMBUS_STATE_NONE;
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(441): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  __weak void HAL_SMBUS_MspInit(SMBUS_HandleTypeDef *hsmbus)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(441): warning:  #159-D: declaration is incompatible with previous "HAL_SMBUS_MspInit"  (declared at line 333)
+  __weak void HAL_SMBUS_MspInit(SMBUS_HandleTypeDef *hsmbus)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(456): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  __weak void HAL_SMBUS_MspDeInit(SMBUS_HandleTypeDef *hsmbus)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(456): warning:  #159-D: declaration is incompatible with previous "HAL_SMBUS_MspDeInit"  (declared at line 421)
+  __weak void HAL_SMBUS_MspDeInit(SMBUS_HandleTypeDef *hsmbus)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c(907): error:  #20: identifier "SMBUS_HandleTypeDef" is undefined
+  HAL_StatusTypeDef HAL_SMBUS_Master_Transmit_IT(SMBUS_HandleTypeDef *hsmbus, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions)
+C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c: 10 warnings, 30 errors
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_usart.c...
+".\Objects\KeliC_Quadcopter_Project.axf" - 60 Error(s), 38 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0.0
+   * Component: CORE Version: 5.3.0
+   * Component: Keil RTX Version: 4.82.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.7.10.0.pack
+                Keil.MDK-Middleware.7.10.0
+                Middleware for Keil MDK-Professional and MDK-Plus
+   * Component: LED Version: 1.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: LED Version: 2.0.0
+   * Component: Classic Version: 1.7.6
+   * Component: Common Version: 1.7.6
+   * Component: Cortex Version: 1.7.6
+   * Component: DMA Version: 1.7.6
+   * Component: GPIO Version: 1.7.6
+   * Component: I2C Version: 1.7.6
+   * Component: PWR Version: 1.7.6
+   * Component: RCC Version: 1.7.6
+   * Component: SMBUS Version: 1.7.6
+   * Component: USART Version: 1.7.6
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F407VGTx
+  .\RTE\_Target_1
+  C:\Users\PC\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\PC\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS\RTX\INC
+  C:\Users\PC\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.10.0\Board
+  C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  C:\Users\PC\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\STM32F4xx_HAL_Driver\Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Board Support:LED:1.0.0 (API)
+      Include file:  Board\Board_LED.h
+
+   * Component: ::CMSIS:RTOS:1.0.0 (API)
+
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.82.0
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
+      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MailQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MemPool.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
+      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
+      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
+      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
+      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM4.lib
+
+   * Component: Keil.STM32F4-Discovery::Board Support:LED:2.0.0
+      Source file:   MDK\Boards\ST\STM32F4-Discovery\Common\LED_F4Discovery.c
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.7.6
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Source file:   MDK\Templates_LL\Src\main.c
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\main.c
+      Include file:  MDK\Templates\Inc\main.h
+      Include file:  MDK\Templates_LL\Inc\main.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.7.6
+      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:I2C:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:SMBUS:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smbus.c
+
+   * Component: Keil::Device:STM32Cube HAL:USART:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c
+
+   * Component: Keil::Device:Startup:2.6.3
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:47
+</pre>
+</body>
+</html>
